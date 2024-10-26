@@ -78,7 +78,7 @@ A Postman collection is included in the repository to make API testing straightf
 ### Login Credentials
 - The application comes with three predefined user accounts to test role-based authorization:
 
-####Manager Account
+#### Manager Account
 - Email: Manager@Test.com
 - Password: @Dmin123!
 - Role: Manager
