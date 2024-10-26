@@ -1,6 +1,6 @@
 # Project Management API
 
-This is a backend API for managing projects and tasks built with **.NET 8 Core**. It uses **ASP.NET Core Identity** for authentication and authorization, **InMemoryDb** for data storage, and includes dummy data generation using the **Pogus** library. It is designed to be easy to run, test, and extend.
+This is a backend API for managing projects and tasks built with **.NET 8**. It uses **ASP.NET Core Identity** for authentication and authorization, **InMemoryDb** for data storage, and includes dummy data generation using the **Pogus** library. It is designed to be easy to run, test, and extend.
 
 ## Getting Started
 
@@ -8,7 +8,7 @@ To run this project, follow the steps below.
 
 ### 1. Prerequisites
 
-- .NET 8 SDK installed
+- .NET 8 SDK & runtime installed
 - Postman (for testing the APIs) 
 
 ### 2. Cloning the Repository
@@ -19,7 +19,7 @@ Clone the repository to your local machine.
 ### API Testing with Postman
 - A Postman collection is provided with the repository (Included in the project ProjectManagement.postman_collection.json ). You can use it to test the API endpoints with predefined requests and data.
 - Import the Postman collection from the project root.
-####Use the collection to interact with various endpoints such as:
+#### Use the collection to interact with various endpoints such as:
 - User registration and login
 - Creating, updating, and deleting projects
 - Managing tasks within projects.
@@ -74,3 +74,21 @@ A Postman collection is included in the repository to make API testing straightf
 - 1- Import the collection into Postman.
 - 2- Use the login endpoint to get a JWT token.
 - 3- Set the token in the Authorization header of subsequent requests to access protected APIs.
+
+### Login Credentials
+- The application comes with three predefined user accounts to test role-based authorization:
+
+####Manager Account
+- Email: Manager@Test.com
+- Password: @Dmin123!
+- Role: Manager
+
+#### Employee Account 1
+- Email: Employee1@Test.com
+- Password: @Dmin123!
+- Role: Employee
+
+#### Employee Account 2
+- Email: Employee2@Test.com
+- Password: @Dmin123!
+- Role: Employee
