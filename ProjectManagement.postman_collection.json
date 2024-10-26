@@ -1,0 +1,1444 @@
+{
+	"info": {
+		"_postman_id": "46ad89d4-e00e-411d-ad62-116e84cff55b",
+		"name": "ProjectManagement",
+		"description": "The Seeder Will Create 3 User ( 1 Manager & 2 Employees)\n\n  \nThe Manager User Has Id = 1, email: [Manager@Test.com ](https://mailto:Manager@Test.com) , password: @Dmin123!\n\nThe Employee User Has Id = 2, email: Employee[@Test.com ](https://mailto:Manager@Test.com) , password: @Dmin123!\n\nThe Employee2 User Has Id = 3, email: Employee2[@Test.com ](https://mailto:Manager@Test.com) , password: @Dmin123!",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26273978"
+	},
+	"item": [
+		{
+			"name": "ProjectManagment APIs",
+			"item": [
+				{
+					"name": "Comment",
+					"item": [
+						{
+							"name": "task",
+							"item": [
+								{
+									"name": "/api/Comment/task/:taskId",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Comment/task/:taskId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Comment",
+												"task",
+												":taskId"
+											],
+											"variable": [
+												{
+													"key": "taskId",
+													"value": "3",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "https://localhost:7026/api/Comment/task/:taskId",
+													"protocol": "https",
+													"host": [
+														"localhost"
+													],
+													"port": "7026",
+													"path": [
+														"api",
+														"Comment",
+														"task",
+														":taskId"
+													],
+													"variable": [
+														{
+															"key": "taskId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/Comment",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"content\": \"<string>\",\n  \"taskId\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Comment",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Comment"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"content\": \"<string>\",\n  \"taskId\": \"<integer>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://localhost:7026/api/Comment",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7026",
+											"path": [
+												"api",
+												"Comment"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Project",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "/api/Project/:id",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Project/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Project",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "https://localhost:7026/api/Project/:id",
+													"protocol": "https",
+													"host": [
+														"localhost"
+													],
+													"port": "7026",
+													"path": [
+														"api",
+														"Project",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/Project/:id",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"budget\": \"<double>\",\n  \"endDate\": \"<dateTime>\",\n  \"name\": \"<string>\",\n  \"startDate\": \"<dateTime>\",\n  \"status\": 2,\n  \"description\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Project/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Project",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"budget\": \"<double>\",\n  \"endDate\": \"<dateTime>\",\n  \"name\": \"<string>\",\n  \"startDate\": \"<dateTime>\",\n  \"status\": 2,\n  \"description\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "https://localhost:7026/api/Project/:id",
+													"protocol": "https",
+													"host": [
+														"localhost"
+													],
+													"port": "7026",
+													"path": [
+														"api",
+														"Project",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/Project/:id",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Project/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Project",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "https://localhost:7026/api/Project/:id",
+													"protocol": "https",
+													"host": [
+														"localhost"
+													],
+													"port": "7026",
+													"path": [
+														"api",
+														"Project",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/Project",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/Project",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Project"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "https://localhost:7026/api/Project",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7026",
+											"path": [
+												"api",
+												"Project"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/Project",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Test\",\n  \"description\": \"Desc\",\n  \"startDate\": \"2024-10-26T07:09:52.044Z\",\n  \"endDate\": \"2024-10-26T07:09:52.044Z\",\n  \"budget\": 3213,\n  \"ownerId\": 1,\n  \"status\": 1,\n  \"tasks\": [\n    {\n      \"name\": \"Task 1\",\n      \"description\": \"Task Desc\",\n      \"assignedTo\": 2,\n      \"priority\": 3,\n      \"status\": 3,\n      \"startDate\": \"2024-10-26T07:09:52.044Z\",\n      \"endDate\": \"2024-10-26T07:09:52.044Z\",\n      \"projectId\": 1\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Project",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Project"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"budget\": \"<double>\",\n  \"endDate\": \"<dateTime>\",\n  \"name\": \"<string>\",\n  \"ownerId\": \"<integer>\",\n  \"startDate\": \"<dateTime>\",\n  \"status\": 1,\n  \"description\": \"<string>\",\n  \"tasks\": [\n    {\n      \"assignedTo\": \"<integer>\",\n      \"endDate\": \"<dateTime>\",\n      \"name\": \"<string>\",\n      \"projectId\": \"<integer>\",\n      \"startDate\": \"<dateTime>\",\n      \"description\": \"<string>\",\n      \"priority\": 1,\n      \"status\": 2\n    },\n    {\n      \"assignedTo\": \"<integer>\",\n      \"endDate\": \"<dateTime>\",\n      \"name\": \"<string>\",\n      \"projectId\": \"<integer>\",\n      \"startDate\": \"<dateTime>\",\n      \"description\": \"<string>\",\n      \"priority\": 2,\n      \"status\": 3\n    }\n  ]\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://localhost:7026/api/Project",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7026",
+											"path": [
+												"api",
+												"Project"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Identity",
+					"item": [
+						{
+							"name": "register",
+							"item": [
+								{
+									"name": "/api/Identity/register",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/problem+json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Identity/register",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Identity",
+												"register"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "https://localhost:7026/api/Identity/register",
+													"protocol": "https",
+													"host": [
+														"localhost"
+													],
+													"port": "7026",
+													"path": [
+														"api",
+														"Identity",
+														"register"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										},
+										{
+											"name": "Bad Request",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/problem+json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Identity/register",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Identity",
+														"register"
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/problem+json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"type\": \"<string>\",\n  \"title\": \"<string>\",\n  \"status\": \"<integer>\",\n  \"detail\": \"<string>\",\n  \"instance\": \"<string>\",\n  \"errors\": {\n    \"id9_\": [\n      \"<string>\",\n      \"<string>\"\n    ],\n    \"nisid04\": [\n      \"<string>\",\n      \"<string>\"\n    ]\n  }\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "login",
+							"item": [
+								{
+									"name": "Employee Login",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"Employee@Test.com\",\n    \"password\": \"@Dmin123!\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Identity/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Identity",
+												"login"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"twoFactorCode\": \"<string>\",\n  \"twoFactorRecoveryCode\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "https://localhost:7026/api/Identity/login?useCookies=<boolean>&useSessionCookies=<boolean>",
+													"protocol": "https",
+													"host": [
+														"localhost"
+													],
+													"port": "7026",
+													"path": [
+														"api",
+														"Identity",
+														"login"
+													],
+													"query": [
+														{
+															"key": "useCookies",
+															"value": "<boolean>"
+														},
+														{
+															"key": "useSessionCookies",
+															"value": "<boolean>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"accessToken\": \"<string>\",\n  \"expiresIn\": \"<long>\",\n  \"refreshToken\": \"<string>\",\n  \"tokenType\": \"<string>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Employee2 Login",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"email\": \"Employee2@Test.com\",\n    \"password\": \"@Dmin123!\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Identity/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Identity",
+												"login"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"twoFactorCode\": \"<string>\",\n  \"twoFactorRecoveryCode\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "https://localhost:7026/api/Identity/login?useCookies=<boolean>&useSessionCookies=<boolean>",
+													"protocol": "https",
+													"host": [
+														"localhost"
+													],
+													"port": "7026",
+													"path": [
+														"api",
+														"Identity",
+														"login"
+													],
+													"query": [
+														{
+															"key": "useCookies",
+															"value": "<boolean>"
+														},
+														{
+															"key": "useSessionCookies",
+															"value": "<boolean>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"accessToken\": \"<string>\",\n  \"expiresIn\": \"<long>\",\n  \"refreshToken\": \"<string>\",\n  \"tokenType\": \"<string>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Manager Login",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"Manager@Test.com\",\n  \"password\": \"@Dmin123!\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Identity/login",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Identity",
+												"login"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"twoFactorCode\": \"<string>\",\n  \"twoFactorRecoveryCode\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "https://localhost:7026/api/Identity/login?useCookies=<boolean>&useSessionCookies=<boolean>",
+													"protocol": "https",
+													"host": [
+														"localhost"
+													],
+													"port": "7026",
+													"path": [
+														"api",
+														"Identity",
+														"login"
+													],
+													"query": [
+														{
+															"key": "useCookies",
+															"value": "<boolean>"
+														},
+														{
+															"key": "useSessionCookies",
+															"value": "<boolean>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"accessToken\": \"<string>\",\n  \"expiresIn\": \"<long>\",\n  \"refreshToken\": \"<string>\",\n  \"tokenType\": \"<string>\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "refresh token",
+							"item": [
+								{
+									"name": "/api/Identity/refresh",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"refreshToken\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Identity/refresh",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Identity",
+												"refresh"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													},
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"refreshToken\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "https://localhost:7026/api/Identity/refresh",
+													"protocol": "https",
+													"host": [
+														"localhost"
+													],
+													"port": "7026",
+													"path": [
+														"api",
+														"Identity",
+														"refresh"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"accessToken\": \"<string>\",\n  \"expiresIn\": \"<long>\",\n  \"refreshToken\": \"<string>\",\n  \"tokenType\": \"<string>\"\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Task",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "/api/Task/:id",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"assignedToId\": \"<integer>\",\n  \"endDate\": \"<dateTime>\",\n  \"name\": \"<string>\",\n  \"startDate\": \"<dateTime>\",\n  \"description\": \"<string>\",\n  \"priority\": 3,\n  \"status\": 1\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Task/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Task",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"assignedToId\": \"<integer>\",\n  \"endDate\": \"<dateTime>\",\n  \"name\": \"<string>\",\n  \"startDate\": \"<dateTime>\",\n  \"description\": \"<string>\",\n  \"priority\": 3,\n  \"status\": 1\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "https://localhost:7026/api/Task/:id",
+													"protocol": "https",
+													"host": [
+														"localhost"
+													],
+													"port": "7026",
+													"path": [
+														"api",
+														"Task",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/Task/:id",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Task/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Task",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "https://localhost:7026/api/Task/:id",
+													"protocol": "https",
+													"host": [
+														"localhost"
+													],
+													"port": "7026",
+													"path": [
+														"api",
+														"Task",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/Task",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"assignedTo\": \"<integer>\",\n  \"endDate\": \"<dateTime>\",\n  \"name\": \"<string>\",\n  \"projectId\": \"<integer>\",\n  \"startDate\": \"<dateTime>\",\n  \"description\": \"<string>\",\n  \"priority\": 2,\n  \"status\": 2\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Task",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Task"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"assignedTo\": \"<integer>\",\n  \"endDate\": \"<dateTime>\",\n  \"name\": \"<string>\",\n  \"projectId\": \"<integer>\",\n  \"startDate\": \"<dateTime>\",\n  \"description\": \"<string>\",\n  \"priority\": 2,\n  \"status\": 2\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://localhost:7026/api/Task",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7026",
+											"path": [
+												"api",
+												"Task"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "GetOverdueTasks",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Task/GetOverdueTasks",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Task",
+										"GetOverdueTasks"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"assignedTo\": \"<integer>\",\n  \"endDate\": \"<dateTime>\",\n  \"name\": \"<string>\",\n  \"projectId\": \"<integer>\",\n  \"startDate\": \"<dateTime>\",\n  \"description\": \"<string>\",\n  \"priority\": 2,\n  \"status\": 2\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://localhost:7026/api/Task",
+											"protocol": "https",
+											"host": [
+												"localhost"
+											],
+											"port": "7026",
+											"path": [
+												"api",
+												"Task"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://localhost:7026"
+		},
+		{
+			"key": "token",
+			"value": "CfDJ8KFofOtjI4VHkUc3z8-y0fBDyl6wlIJHRxDsea0H9_rAeGsUaSSC0YxfX1IFPsWDnRaap-hPV5dyX0E95M_OvsZ96IK265we8uHd2CFth4juPmJ9YjYgJgQHpoq7KBsDRAWAAreNK03tE9Y4GBTNk5EBSVSAZ5PenMmpjDtJbG7HU2mnorpTdGZT7XPlxV2L-d5-EnngZXVpGBOOCf_ZuoBYj5whR3RvEz9tmACo7imBLYBqXxOSCcE4Mjecl9djKHli7906j9cUc5MeaoUPVGePaZMGye-y5LJk3hvBmR1QRAfN357dd7ezEUHy1cdnfNr9ECzQ5Wt-LC5vW-MxFcHVIVzRt1U6V_0m2K9_zOa2RC-e2UCUMpMQajbmTatvQS3BBoOAu3cjWEyDGw_5_Fl_r4EVO4mU4V5L8RUW0bBe39icNtmRPYoZm7YvK2QFj7eBlOjyUqLDQ8ikfFwBY50FefEoTqu_Iq0yRxX2TYtrhU9_SKM262eKKQewZ2mvOlxSjpCLSS9bc854Y1rsGdOIOOCZa43-lPWtLCM6S6dXIlB49SI9YYWmMltu5DIM8I0mwrgnTk_ZyzlfUCbeZY-KeLJBHoRSCgAcWuTRZSdCQ44BBIbkM1RaujT__9EefnNGN-3wMoAceY7m9O2wGO3QhJGWGYobxwxGqiakuC1FrCa_B8WQBqPsJN1upv3_a3OAoG48SNKSjYccn7eTQvtfj9HlKLQ4eGbuu0jWayISZBOfqLrTsDBAah7BdB082Q",
+			"type": "string"
+		}
+	]
+}
