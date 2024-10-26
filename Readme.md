@@ -1,15 +1,22 @@
-# Project Management API
+# Project Management
 
-This is a backend API for managing projects and tasks built with **.NET 8**. It uses **ASP.NET Core Identity** for authentication and authorization, **InMemoryDb** for data storage, and includes dummy data generation using the **Pogus** library. It is designed to be easy to run, test, and extend.
+This is a full-stack application for managing projects and tasks, built with **.NET 8** for the backend and **React** for the frontend. The backend API uses **ASP.NET Core Identity** for authentication and authorization, **InMemoryDb** for data storage, and includes dummy data generation using the **Pogus** library. The React frontend provides an intuitive user interface to interact with the backend API. The application is designed to be easy to run, test, and extend.
+
+## Project Structure
+
+- **Backend**: Built with **.NET 8** (ASP.NET Core), providing a RESTful API for managing projects and tasks.
+- **Frontend**: Built with **React**, using **Bootstrap** for styling, and integrates with the backend API for displaying and managing project data. (Under development).
 
 ## Getting Started
 
-To run this project, follow the steps below.
+To run this project, follow the steps below for both the **backend** and **frontend**.
+
 
 ### 1. Prerequisites
 
 - .NET 8 SDK & runtime installed
-- Postman (for testing the APIs) 
+- Postman (for testing the APIs)
+- Node.js & Npm
 
 ### 2. Cloning the Repository
 
@@ -78,7 +85,7 @@ A Postman collection is included in the repository to make API testing straightf
 ### Login Credentials
 - The application comes with three predefined user accounts to test role-based authorization:
 
-####Manager Account
+#### Manager Account
 - Email: Manager@Test.com
 - Password: @Dmin123!
 - Role: Manager
