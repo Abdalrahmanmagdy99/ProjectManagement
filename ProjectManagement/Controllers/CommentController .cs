@@ -16,7 +16,7 @@ namespace ProjectManagement.Controllers
         {
             _commentService = commentService;
         }
-         [Authorize(AuthenticationSchemes = "Identity.Bearer")]
+        [Authorize(AuthenticationSchemes = "Identity.Bearer")]
         [HttpPost]
         public async Task<IActionResult> AddComment([FromBody] AddCommentDto input)
         {
@@ -28,6 +28,7 @@ namespace ProjectManagement.Controllers
         }
 
         [HttpGet("task/{taskId}")]
+        [Authorize(AuthenticationSchemes = "Identity.Bearer")]
         public async Task<IActionResult> GetCommentsByTaskId(int taskId)
         {
             var comments = await _commentService.GetCommentsByTaskIdAsync(taskId);

@@ -29,6 +29,7 @@ namespace ProjectManagement.Controllers
         }
 
         [HttpGet("{id}")]
+        [Authorize(AuthenticationSchemes = "Identity.Bearer")]
         public async Task<IActionResult> Get(int id)
         {
             var project = await _projectService.GetProjectByIdAsync(id);
@@ -63,7 +64,7 @@ namespace ProjectManagement.Controllers
 
             return Ok("Project updated successfully.");
         }
-         [Authorize(AuthenticationSchemes = "Identity.Bearer", Roles = RolesNames.Manager)]
+        [Authorize(AuthenticationSchemes = "Identity.Bearer", Roles = RolesNames.Manager)]
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {

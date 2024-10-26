@@ -55,7 +55,6 @@ namespace ProjectManagement.Controllers
 
             return Ok("Task updated successfully.");
         }
-
         [Authorize(AuthenticationSchemes = "Identity.Bearer")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
@@ -68,6 +67,7 @@ namespace ProjectManagement.Controllers
         }
 
         [HttpGet(nameof(GetOverdueTasks))]
+        [Authorize(AuthenticationSchemes = "Identity.Bearer")]
         public async Task<IActionResult> GetOverdueTasks()
         {
             var result = await _taskService.GetExpiredTasksAsync();

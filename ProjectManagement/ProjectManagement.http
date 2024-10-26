@@ -1,6 +1,92 @@
-@ProjectManagement_HostAddress = http://localhost:5298
-
-GET {{ProjectManagement_HostAddress}}/weatherforecast/
+### GET All Projects
+GET http://localhost:5298/api/Project
 Accept: application/json
 
 ###
+
+### GET Project by ID
+GET http://localhost:5298/api/Project/1
+Accept: application/json
+
+###
+
+### POST Create Project
+POST http://localhost:5298/api/Project
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "New Project",
+  "description": "Project description",
+  "startDate": "2024-10-26T07:09:52.044Z",
+  "endDate": "2024-10-27T07:09:52.044Z",
+  "budget": 3000,
+  "ownerId": 1,
+  "status": 1,
+  "tasks": [
+    {
+      "name": "Task 1",
+      "description": "Task 1 description",
+      "assignedTo": 2,
+      "priority": 2,
+      "status": 1,
+      "startDate": "2024-10-26T07:09:52.044Z",
+      "endDate": "2024-10-27T07:09:52.044Z",
+      "projectId": 1
+    }
+  ]
+}
+
+###
+
+### PUT Update Project by ID
+PUT http://localhost:5298/api/Project/1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "name": "Updated Project",
+  "description": "Updated description",
+  "startDate": "2024-10-26T07:09:52.044Z",
+  "endDate": "2024-10-27T07:09:52.044Z",
+  "budget": 5000,
+  "status": 2
+}
+
+###
+
+### DELETE Project by ID
+DELETE http://localhost:5298/api/Project/1
+Authorization: Bearer {{token}}
+
+###
+
+### POST Register User
+POST http://localhost:5298/api/Identity/register
+Content-Type: application/json
+
+{
+  "email": "testuser@example.com",
+  "password": "@Dmin123!"
+}
+
+###
+
+### POST Login
+POST http://localhost:5298/api/Identity/login
+Content-Type: application/json
+
+{
+  "email": "Manager@Test.com",
+  "password": "@Dmin123!"
+}
+
+###
+
+### POST Refresh Token
+POST http://localhost:5298/api/Identity/refresh
+Content-Type: application/json
+
+{
+  "refreshToken": "{{refreshToken}}"
+}
